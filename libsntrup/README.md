@@ -11,8 +11,8 @@ Type
 ```
 Sample output:
 ```
+mulcore finished!
 polymul finished!
-ntrup mul finished!
 ```
 
 # Benchmark
@@ -22,6 +22,6 @@ Type
 ```
 Sample output:
 ```
-polymul cycles: 23420, 23460, 23504
-ntrup mul cycles: 25316, 25356, 25396
+mulcore cycles: 23420, 23460, 23504
+polymul cycles: 25316, 25356, 25396
 ```

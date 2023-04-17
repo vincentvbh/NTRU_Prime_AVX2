@@ -11,8 +11,8 @@ Type
 ```
 Sample output:
 ```
+mulcore finished!
 polymul finished!
-ntrup mul finished!
 ```
 
 # Unit Tests
@@ -51,8 +51,8 @@ Type
 ```
 Sample output:
 ```
-polymul cycles: 13876, 13892, 13912
-ntrup mul cycles: 14288, 14312, 14336
+mulcore cycles: 13876, 13892, 13912
+polymul cycles: 14288, 14312, 14336
 ```
 
 # Microbenchmark
