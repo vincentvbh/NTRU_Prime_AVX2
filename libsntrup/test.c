@@ -62,14 +62,14 @@ int main(void){
         }
     }
 
-    printf("polymul finished!\n");
+    printf("mulcore finished!\n");
 
     for(size_t i = p + p - 2; i >=p; i--){
         coeff_ring.addZ(ref + i - p, ref + i - p, ref + i);
         coeff_ring.addZ(ref + i - p + 1, ref + i - p + 1, ref + i);
     }
 
-    ntrup_mul(res, poly1, poly2);
+    polymul(res, poly1, poly2);
 
     for(size_t i = 0; i < p; i++){
         coeff_ring.memberZ(res + i, res + i);
@@ -81,7 +81,7 @@ int main(void){
         }
     }
 
-    printf("ntrup mul finished!\n");
+    printf("polymul finished!\n");
 
 
 

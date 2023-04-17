@@ -1,7 +1,7 @@
 
 #include "__avx2.h"
 
-void polymul(int16_t *des, const int16_t *src1, const int16_t *src2){
+void mulcore(int16_t *des, const int16_t *src1, const int16_t *src2){
 
     int16_t src1_NTT[ARRAY_N];
     int16_t src2_NTT[ARRAY_N];
@@ -104,14 +104,14 @@ void polymul(int16_t *des, const int16_t *src1, const int16_t *src2){
 
 }
 
-void ntrup_mul(int16_t *des, const int16_t *src1, const int16_t *src2){
+void polymul(int16_t *des, const int16_t *src1, const int16_t *src2){
 
     int16_t buff[1632];
     int16x16_t t;
 
     size_t i;
 
-    polymul(buff, src1, src2);
+    mulcore(buff, src1, src2);
 
     for(i = 0; i + 16 < p - 1; i += 16){
         store_int16x16((int16x16_t*)(buff + i), add_int16x16(load_int16x16((int16x16_t*)(buff + i)),

@@ -41,23 +41,23 @@ int main(void){
 
     for(size_t i = 0; i < ITERATIONS; i++){
         t0 = cpucycles();
+        mulcore(res, poly1, poly2);
+        t1 = cpucycles();
+        cycles[i] = t1 - t0;
+    }
+    qsort(cycles, ITERATIONS, sizeof(uint64_t), cmp_uint64);
+    printf("mulcore cycles: ");
+    printf("%lu, %lu, %lu\n",
+            cycles[ITERATIONS >> 2], cycles[ITERATIONS >> 1], cycles[(ITERATIONS >> 1) + (ITERATIONS >> 2)]);
+
+    for(size_t i = 0; i < ITERATIONS; i++){
+        t0 = cpucycles();
         polymul(res, poly1, poly2);
         t1 = cpucycles();
         cycles[i] = t1 - t0;
     }
     qsort(cycles, ITERATIONS, sizeof(uint64_t), cmp_uint64);
     printf("polymul cycles: ");
-    printf("%lu, %lu, %lu\n",
-            cycles[ITERATIONS >> 2], cycles[ITERATIONS >> 1], cycles[(ITERATIONS >> 1) + (ITERATIONS >> 2)]);
-
-    for(size_t i = 0; i < ITERATIONS; i++){
-        t0 = cpucycles();
-        ntrup_mul(res, poly1, poly2);
-        t1 = cpucycles();
-        cycles[i] = t1 - t0;
-    }
-    qsort(cycles, ITERATIONS, sizeof(uint64_t), cmp_uint64);
-    printf("ntrup mul cycles: ");
     printf("%lu, %lu, %lu\n",
             cycles[ITERATIONS >> 2], cycles[ITERATIONS >> 1], cycles[(ITERATIONS >> 1) + (ITERATIONS >> 2)]);
 

@@ -13,8 +13,8 @@
 #include "__avx2_basemul_FFT.h"
 #include "__avx2_FFT.h"
 
+void mulcore(int16_t *des, const int16_t *src1, const int16_t *src2);
 void polymul(int16_t *des, const int16_t *src1, const int16_t *src2);
-void ntrup_mul(int16_t *des, const int16_t *src1, const int16_t *src2);
 
 #endif
 

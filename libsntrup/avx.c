@@ -2335,7 +2335,7 @@ void mult768_over64(int16 h[1536],const int16 f[768],const int16 g[768])
 #endif
 }
 
-void ntrup_mul(int16_t *des, const int16_t *src1, const int16_t *src2){
+void polymul(int16_t *des, const int16_t *src1, const int16_t *src2){
 
     int16_t buff[1536];
 
