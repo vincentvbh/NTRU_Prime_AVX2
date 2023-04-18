@@ -21,7 +21,7 @@ AVX2_SOURCEs = __avx2_permute.c __avx2_basemul.c __avx2_basemul_Karatsuba.c __av
 HEADERs = $(ASM_HEADERs) $(C_HEADERs) $(AVX2_HEADERs)
 SOURCEs = $(ASM_SOURCEs) $(COMMON_SOURCE) $(C_SOURCEs) $(AVX2_SOURCEs)
 
-all: test bench unit_test microbench
+all: test bench unit_test microbench gen
 
 test: $(addsuffix .c, $@) $(HEADERs) $(SOURCEs)
 	$(CC) $(CFLAGS) $(SOURCEs) -o $@ $(addsuffix .c, $@)
@@ -44,3 +44,4 @@ clean:
 	rm -f unit_test
 	rm -f bench
 	rm -f microbench
+	rm -f gen
