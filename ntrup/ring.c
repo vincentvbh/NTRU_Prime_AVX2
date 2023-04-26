@@ -1,6 +1,4 @@
 
-#include <memory.h>
-
 #include "NTT_params.h"
 #include "ring.h"
 
@@ -46,8 +44,8 @@ void getExpVec(int16_t *des, int16_t w, size_t len){
 
 void DFT(int16_t *des, int16_t *src, int16_t *w_exp, size_t len, size_t jump){
 
-    int16_t *row = (int16_t*)malloc(len * sizeof(int16_t));
-    int16_t *buff = (int16_t*)malloc(len * sizeof(int16_t));
+    int16_t row[len];
+    int16_t buff[len];
 
     int16_t t;
 
@@ -63,8 +61,6 @@ void DFT(int16_t *des, int16_t *src, int16_t *w_exp, size_t len, size_t jump){
     for(size_t i = 0; i < len; i++){
         des[i * jump] = buff[i];
     }
-
-    free(row);
 
 }
 
