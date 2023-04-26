@@ -10,6 +10,8 @@
 #define sqrt2 (1229)
 #define sqrt2inv (2910)
 
+#define BARRETT_BOUND (2881)
+
 #define sqrt2Rmod (-760)
 #define sqrt2invRmod (-380)
 

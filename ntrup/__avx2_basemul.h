@@ -17,6 +17,7 @@ extern void __asm_schoolbook4(int16_t *des, int16_t *src1, int16_t *src2, int16_
 extern void __asm_cyclic_schoolbook4(int16_t *des, int16_t *src1, int16_t *src2, int16_t *_const_buff);
 extern void __asm_negacyclic_schoolbook4(int16_t *des, int16_t *src1, int16_t *src2, int16_t *_const_buff);
 
+void __barrett_int16x16(int16_t *a);
 
 static inline
 int16x16_t montmulmod_int16x16(int16x16_t src1, int16x16_t src2){

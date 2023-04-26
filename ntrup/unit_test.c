@@ -32,7 +32,7 @@ int main(void){
 
     int16_t buff1[256], buff2[256], buff3[256];
 
-    int16_t scale, omega, twiddle, t;
+    int16_t scale, omega, twiddle, t, v;
 
     (void)omega;
     (void)res_NTT;
@@ -48,6 +48,27 @@ int main(void){
     for(size_t i = p; i < ARRAY_N; i++){
         poly1[i] = poly2[i] = 0;
     }
+
+// ================================
+// Barrett
+
+    for(t = -32768; t < 0; t++){
+        buff1[0] = t;
+        __barrett_int16x16(buff1);
+        v = buff1[0];
+        if( (v < -BARRETT_BOUND) || (v > BARRETT_BOUND) ){
+            printf("%8d: %8d\n", t, v);
+        }
+    }
+    for(t = 32767; t > 0; t--){
+        buff1[0] = t;
+        __barrett_int16x16(buff1);
+        v = buff1[0];
+        if( (v < -BARRETT_BOUND) || (v > BARRETT_BOUND) ){
+            printf("%8d: %8d\n", t, v);
+        }
+    }
+
 
 // ================================
 // 2 x 2
