@@ -11,8 +11,6 @@
 
 #include "tools.h"
 #include "naive_mult.h"
-#include "gen_table.h"
-#include "ntt_c.h"
 
 #include "ring.h"
 #include "avx.h"
