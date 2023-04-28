@@ -9,10 +9,7 @@ Please refer to the corresponding folders for instructions.
 
 # Results
 
-| ------ | -------------- | ----------------------- |
-| ------ | -------------- | ----------------------- |
 | Operation | [BBCT22](https://www.usenix.org/conference/usenixsecurity22/presentation/bernstein) | This work |
-| ------ | -------------- | ----------------------- |
 | ------ | -------------- | ----------------------- |
 | <tt>mulcore</tt> |  | |
 | ------ | -------------- | ----------------------- |
