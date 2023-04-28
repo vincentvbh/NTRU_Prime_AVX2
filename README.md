@@ -7,3 +7,14 @@ Our big-by-big polynomial multiplication for <tt>ntrulpr761/sntrup761</tt> is 1.
 Folder ``libsntrup`` contains their big-by-big polynomial multiplication and folder ``ntrup`` contains ours.
 Please refer to the corresponding folders for instructions.
 
+# Results
+
+| ------ | -------------- | ----------------------- |
+| ------ | -------------- | ----------------------- |
+| Operation | [BBCT22](https://www.usenix.org/conference/usenixsecurity22/presentation/bernstein) | This work |
+| ------ | -------------- | ----------------------- |
+| ------ | -------------- | ----------------------- |
+| <tt>mulcore</tt> |  | |
+| ------ | -------------- | ----------------------- |
+| <tt>polymul</tt> |  | |
+
